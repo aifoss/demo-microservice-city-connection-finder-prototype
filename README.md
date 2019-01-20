@@ -64,9 +64,13 @@ Start the application as described in Run Option 1.
 Open a browser and go to http://localhost:8080/swagger-ui.html.
 
 On the City Connection Finder API page, click on the arrow next to "city-connection-finder-controller".
+
 Click on "GET /connected".
+
 Click on "Try it out" button.
+
 Provide origin and destination city names.
+
 Click on "Execute".
 
 ### Run Option 3: Postman
