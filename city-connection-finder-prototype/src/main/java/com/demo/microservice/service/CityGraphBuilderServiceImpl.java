@@ -42,7 +42,7 @@ public class CityGraphBuilderServiceImpl implements CityGraphBuilderService {
                 continue;
             }
 
-            graph.addEdge(cityNames[0].trim(), cityNames[1].trim());
+            graph.addEdge(cityNames[0].trim().toLowerCase(), cityNames[1].trim().toLowerCase());
         }
 
         scanner.close();

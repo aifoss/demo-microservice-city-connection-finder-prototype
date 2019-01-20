@@ -15,20 +15,16 @@ public class TestUtil {
 	public static Graph createTestGraph() {
 		Graph graph = new Graph();
 		
-		graph.addEdge("Boston", "New York");
-		graph.addEdge("Philadelphia", "Newark");
-		graph.addEdge("Newark", "Boston");
-		graph.addEdge("Trenton", "Albany");
+		graph.addEdge("boston", "new york");
+		graph.addEdge("philadelphia", "newark");
+		graph.addEdge("newark", "boston");
+		graph.addEdge("trenton", "albany");
 		
 		return graph;
 	}
 	
 	public static String getApiUri(String origin, String destination) {
 		return "/connected?origin=" + origin + "&destination=" + destination;
-	}
-	
-	public static String getFullApiUri(String origin, String destination) {
-		return "http://localhost:8080/connected?origin=" + origin + "&destination=" + destination;
 	}
 	
 }

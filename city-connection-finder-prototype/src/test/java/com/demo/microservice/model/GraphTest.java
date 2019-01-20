@@ -19,14 +19,14 @@ public class GraphTest {
 	public void test() {
 		assertEquals(6, GRAPH.getNodeSet().size());
 		assertEquals(6, GRAPH.getAdjMap().size());
-		assertTrue(GRAPH.getNodeSet().contains("New York"));
-		assertFalse(GRAPH.getNodeSet().contains("Paris"));
-		assertEquals(1, GRAPH.getAdjMap().get("Philadelphia").size());
-		assertTrue(GRAPH.getAdjMap().get("Philadelphia").contains("Newark"));
-		assertEquals(2, GRAPH.getAdjMap().get("Boston").size());
-		assertTrue(GRAPH.getAdjMap().get("Boston").contains("Newark"));
-		assertTrue(GRAPH.getAdjMap().get("Boston").contains("New York"));
-		assertFalse(GRAPH.getAdjMap().get("Boston").contains("Albany"));
+		assertTrue(GRAPH.getNodeSet().contains("new york"));
+		assertFalse(GRAPH.getNodeSet().contains("paris"));
+		assertEquals(1, GRAPH.getAdjMap().get("philadelphia").size());
+		assertTrue(GRAPH.getAdjMap().get("philadelphia").contains("newark"));
+		assertEquals(2, GRAPH.getAdjMap().get("boston").size());
+		assertTrue(GRAPH.getAdjMap().get("boston").contains("newark"));
+		assertTrue(GRAPH.getAdjMap().get("boston").contains("new york"));
+		assertFalse(GRAPH.getAdjMap().get("boston").contains("albany"));
 	}
 
 }

@@ -28,19 +28,22 @@ public class CityConnectionFinderServiceImpl implements CityConnectionFinderServ
 
 	@Override 
 	public boolean findConnection(String origin, String destination) {
-		LOGGER.info("Checking if connection exists between {} and {}", origin, destination);
+		origin = origin.toLowerCase();
+		destination = destination.toLowerCase();
+		
+		LOGGER.info("Checking if connection exists between {{}} and {{}}", origin, destination);
 		
 		if (origin.equals(destination)) {
-        	LOGGER.info("Identical city {} for origin and destination, returning positive response", origin);
+        	LOGGER.info("Identical city {{}} for origin and destination, returning positive response", origin);
             return true;
         }
 		
 		if (!graph.getNodeSet().contains(origin)) {
-			LOGGER.info("Unrecognized origin: {}, returning negative response", origin);
+			LOGGER.info("Unrecognized origin: {{}}, returning negative response", origin);
 			return false;
 		}
 		if (!graph.getNodeSet().contains(destination)) {
-			LOGGER.info("Unrecognized destination: {}, returning negative response", destination);
+			LOGGER.info("Unrecognized destination: {{}}, returning negative response", destination);
 			return false;
 		}
 		
@@ -63,7 +66,7 @@ public class CityConnectionFinderServiceImpl implements CityConnectionFinderServ
             String node = q.remove();
 
             for (String adj : graph.getAdjMap().get(node)) {
-                if (adj.equalsIgnoreCase(destination)) {
+                if (adj.equals(destination)) {
                 	LOGGER.info("Connection found, returning positive response");
                     return true;
                 }
