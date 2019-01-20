@@ -22,15 +22,23 @@ Build a graph where each city becomes a node and a direct path between two citie
 In order to detect a connection between two given cities, use the following algorithm:
 
 1. Check base/edge cases:
+
    a. If the two cities are identical, i.e., represent the same city, return true.
+
    b. If either of the two cities is not a node in the graph, return false.
+
    c. If the two cities are directly connected, i.e., there is an edge between the two cities, return true.
 
 2. Use BFS algorithm to check the connection between the two cities:
+
    Initially, the queue and visited set contain one of the two cities, regarded as the origin city.
+
    While the queue is not empty, poll a city from the queue, and check each of the adjacent cities directly connected.
-     If an adjacent city is the destination city, return true.
-     Else, if the adjacent city has not been visited yet, mark it as visited and add it to the queue.
+   
+   	a. If an adjacent city is the destination city, return true.
+   	
+   	b. Else, if the adjacent city has not been visited yet, mark it as visited and add it to the queue.
+
    Once the queue is emptied out, it means that there is no connection between the two input cities, so return false.
   
 ## Run Instructions
