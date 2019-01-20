@@ -1,13 +1,13 @@
 package com.demo.microservice.service;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
-import org.springframework.util.ResourceUtils;
 
 import com.demo.microservice.model.Graph;
 
@@ -22,7 +22,7 @@ public class CityGraphBuilderServiceImpl implements CityGraphBuilderService {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(CityGraphBuilderServiceImpl.class);
 	
-	private static final String INPUT_FILE_PATH = "classpath:city.txt";
+	private static final String INPUT_FILE_PATH = "/static/city.txt";
 	private static final String DELIMITER = ", ";
 	
 	@Override
@@ -31,9 +31,9 @@ public class CityGraphBuilderServiceImpl implements CityGraphBuilderService {
 		
 		Graph graph = new Graph();
 		
-		File file = ResourceUtils.getFile(INPUT_FILE_PATH);
-		Scanner scanner = new Scanner(file);
-		
+		Resource resource = new ClassPathResource(INPUT_FILE_PATH);
+		Scanner scanner = new Scanner(resource.getInputStream());
+
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine().trim();
 
