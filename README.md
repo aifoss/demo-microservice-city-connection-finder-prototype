@@ -49,6 +49,7 @@ In order to detect a connection between two given cities, use the following algo
 ### Prerequisites
 
 Clone the repository or download zip.
+
 Executable city-connection-finder-prototype-0.jar is located in city-connection-finder-prototype/target directory.
 
 ### Run Option 1: Web Browser
