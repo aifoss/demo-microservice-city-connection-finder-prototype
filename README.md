@@ -88,4 +88,5 @@ Click on "Execute".
 ### Run Option 3: Postman
 
 Start the application as described in Run Option 1.
+
 Send GET requests on Postman using the URLs as above.
