@@ -82,9 +82,5 @@ public class CityConnectionFinderServiceImpl implements CityConnectionFinderServ
 
         return false;
 	}
-
-	public void setGraph(Graph graph) {
-		this.graph = graph;
-	}
 	
 }

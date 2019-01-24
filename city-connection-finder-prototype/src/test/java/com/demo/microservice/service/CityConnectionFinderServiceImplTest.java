@@ -8,6 +8,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.MockitoAnnotations;
+import org.springframework.test.util.ReflectionTestUtils;
 
 /**
  * Unit test for {@link CityConnectionFinderServiceImpl}.
@@ -23,7 +24,7 @@ public class CityConnectionFinderServiceImplTest {
 	@Before
 	public void setUp() {
 		MockitoAnnotations.initMocks(this);
-		cityConnectionFinderService.setGraph(GRAPH);
+		ReflectionTestUtils.setField(cityConnectionFinderService, "graph", GRAPH);
 	}
 
 	@Test

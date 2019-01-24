@@ -32,7 +32,7 @@ public class CityConnectionFinderControllerTest {
 	}
 	
 	@Test
-	public void testCheckIfConnectionExists_yes() {
+	public void test_checkIfConnectionExists_yes() {
 		String origin = "Boston";
 		String destination = "New York";
 		
@@ -44,7 +44,7 @@ public class CityConnectionFinderControllerTest {
 	}
 	
 	@Test
-	public void testCheckIfConnectionExists_no() {
+	public void test_checkIfConnectionExists_no() {
 		String origin = "Philadelphia";
 		String destination = "Albany";
 		
@@ -55,4 +55,6 @@ public class CityConnectionFinderControllerTest {
 		assertEquals("no", result);
 	}
 
+	
+	
 }

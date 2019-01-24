@@ -1,10 +1,13 @@
 # demo-microservice-city-connection-finder-prototype
 Prototype MVP (Minimum Viable Product) Version of City Connection Finder Microservice
 
+Go [here](https://github.com/aifoss/demo-microservice-city-connection-finder-full-version) for an extended version.
+
 ## Tools/Technologies Used
 
 * Java 1.8
 * Spring Boot
+* JUnit, Mockito
 * Spring Tool Suite
 * Swagger 2
 
@@ -35,9 +38,9 @@ In order to detect a connection between two given cities, use the following algo
 
    While the queue is not empty, poll a city from the queue, and check each of the adjacent cities directly connected.
    
-   	a. If an adjacent city is the destination city, return true.
+   		a. If an adjacent city is the destination city, return true.
    	
-   	b. Else, if the adjacent city has not been visited yet, mark it as visited and add it to the queue.
+   		b. Else, if the adjacent city has not been visited yet, mark it as visited and add it to the queue.
 
    Once the queue is emptied out, it means that there is no connection between the two input cities, so return false.
   
@@ -45,8 +48,8 @@ In order to detect a connection between two given cities, use the following algo
 
 ### Prerequisites
 
-* Installation of Java 1.8
-* Download of city-connection-finder-prototype-0.jar (from city-connection-finder-prototype/target directory)
+Clone the repository or download zip.
+Executable city-connection-finder-prototype-0.jar is located in city-connection-finder-prototype/target directory.
 
 ### Run Option 1: Web Browser
 
