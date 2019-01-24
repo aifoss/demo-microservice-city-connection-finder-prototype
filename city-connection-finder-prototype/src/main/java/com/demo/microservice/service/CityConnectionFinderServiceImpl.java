@@ -34,9 +34,9 @@ public class CityConnectionFinderServiceImpl implements CityConnectionFinderServ
 		LOGGER.info("Checking if connection exists between {{}} and {{}}", origin, destination);
 		
 		if (origin.equals(destination)) {
-        	LOGGER.info("Identical city {{}} for origin and destination, returning positive response", origin);
-            return true;
-        }
+			LOGGER.info("Identical city {{}} for origin and destination, returning positive response", origin);
+			return true;
+		}
 		
 		if (!graph.getNodeSet().contains(origin)) {
 			LOGGER.info("Unrecognized origin: {{}}, returning negative response", origin);
@@ -47,10 +47,10 @@ public class CityConnectionFinderServiceImpl implements CityConnectionFinderServ
 			return false;
 		}
 		
-        if (graph.getAdjMap().get(origin).contains(destination)) {
-        	LOGGER.info("Diret path exists, returning positive response");
-        	return true;
-        }
+		if (graph.getAdjMap().get(origin).contains(destination)) {
+			LOGGER.info("Diret path exists, returning positive response");
+			return true;
+		}
         
         return findIndirectConnection(origin, destination);
     }
@@ -79,7 +79,7 @@ public class CityConnectionFinderServiceImpl implements CityConnectionFinderServ
         }
         
         LOGGER.info("Connection not found, returning negative response");
-
+        
         return false;
 	}
 	
